@@ -1,6 +1,5 @@
 import Image from 'next/image';
 import React, { useState, useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
 import Link from 'next/link';
 import { MdOutlineKeyboardArrowLeft, MdOutlineKeyboardArrowRight } from 'react-icons/md';
 import { AiOutlineHeart, AiTwotoneHeart } from 'react-icons/ai';

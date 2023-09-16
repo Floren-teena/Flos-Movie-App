@@ -9,7 +9,7 @@
 - [📖 About the Project](#about-project)
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
-    - [Key Features](#key-features)
+    - [Significant Features](#significant-features)
   - [🚀 Live Demo](#live-demo)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
@@ -17,11 +17,8 @@
   - [Usage](#usage)
   - [Deployment](#triangular_flag_on_post-deployment)
 - [👥 Authors](#authors)
-- [🔭 Future Features](#future-features)
 - [🤝 Contributing](#contributing)
-- [⭐️ Show your support](#support)
 - [🙏 Acknowledgements](#acknowledgements)
-- [📝 License](#license)
 
 ### Flos Movies <a name="about-project"></a>
 
@@ -37,15 +34,15 @@
   <li><a href="https://axios-http.com/docs/intro">Axios</a></li>
 </ul>
 
-### Key Features <a name="key-features"></a>
+### Significant Features <a name="significant-features"></a>
 
 - **Display 10 Featured movies**
-- **like functionality**
-- **search for movies by title**
+- **Implented like functionality**
+- **Users can search for movies by title**
 - **Display search results**
-- **loading indicator**
-- **movie details page**
-- **Error Handling**
+- **Implemented loading indicator**
+- **Movie details page**
+- **Implemented Error Handling**
 - **Navigation**
 - **Responsiveness**
 
@@ -53,7 +50,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-[Live_Demo](https://zikmovies.vercel.app/)
+[Live_Demo](https://flosmovieapp.vercel.app/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -65,7 +62,7 @@ To get a local copy up and running, follow these steps.
 
 In order to run this project you need:
 
-- A browser (e.g. Firefox)
+- A browser (e.g. Microsoft)
 - An IDE (e.g. [Vususal Studio Code](https://code.visualstudio.com/download))
 - [npm](https://nodejs.org/en/)
 - Terminal
@@ -105,9 +102,9 @@ You can deploy this project by:
 
 - visiting your repository on [Vercel](https://vercel.com/)
 - Signup / Signin
-- Connect your github repo to vercel
+- Connect your github repository to vercel
 - Add project from github
-- Select the main branch and host
+- Select the main branch and deploy it
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -118,35 +115,14 @@ You can deploy this project by:
 - GitHub: [@Florenteena](https://github.com/Floren-teena)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/florentina-antigha-85793826a/)
 
-## 🔭 Future Features <a name="future-features"></a>
-
-- [ ] **Complete like functionality integrating TMDB api**
-- [ ] **Registration of new users**
-- [ ] **Improved Navigation**
-- [ ] **Watch Trailer**
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 ## 🤝 Contributing <a name="contributing"></a>
 
-Contributions, issues, and feature requests are welcome!
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-## ⭐️ Show your support <a name="support"></a>
-
-If you like this project, give it a `star` and let me know what you like in particular.
+Contributions and feature requests are welcome!
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-I would like to thank the HNG team for giving me this opportunity to build this project.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-## 📝 License <a name="license"></a>
-
-This project is [MIT](./MIT.md) licensed.
+I would love to thank the HNG Internship team for giving me the opportunity to participate in this program and build this project.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

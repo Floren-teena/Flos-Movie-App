@@ -1,6 +1,5 @@
 import Image from 'next/image';
 import React from 'react';
-import { ColorRing } from 'react-loader-spinner';
 
 const SplashScreen = ({featuredMovie}) => {
 	return (

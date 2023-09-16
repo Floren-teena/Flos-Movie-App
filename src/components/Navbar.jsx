@@ -1,7 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
-import { BsSearch } from 'react-icons/bs';
 import { AiOutlineMenuUnfold, AiOutlineClose } from 'react-icons/ai';
 import Form from './Form';
 

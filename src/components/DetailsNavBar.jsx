@@ -1,10 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { BsSearch } from 'react-icons/bs';
-import { AiOutlineMenuUnfold, AiOutlineClose } from 'react-icons/ai';
-import Form from './Form';
 
 const DetailsNavBar = () => {
 	const [height, setHeight] = useState(0);

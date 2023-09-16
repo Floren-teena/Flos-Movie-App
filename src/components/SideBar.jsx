@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import Link from 'next/link'; // Use appropriate routing library
-import { RiMovie2Fill, RiHomeFill, RiTvFill, RiCalendar2Fill } from 'react-icons/ri';
 import Image from 'next/image';
 import { MdOutlineLogout } from 'react-icons/md';
 const navLinks = [
