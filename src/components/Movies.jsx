@@ -10,6 +10,9 @@ const Movies = ({allMovies}) => {
 	const [isMore, setIsMore] = useState(false);
     const searchQuery = ""
     useEffect(() => {
+		allMovies.forEach((item)=>{
+			item.isLiked=false 
+		})
 		setMovies(allMovies.slice(0, 10));
 	}, [allMovies]);
 
@@ -24,7 +27,16 @@ const Movies = ({allMovies}) => {
 	};
 
 	const handleLike = (id) => {
-		
+		const newMovies = movies.map((movie)=>{
+			if (movie.id === id) {
+				movie.vote_count = movie.isLiked ? movie.vote_count - 1 : movie.vote_count + 1;
+				movie.isLiked = !movie.isLiked;
+				return movie
+			}
+			return movie
+		})
+		console.log(newMovies)
+		setMovies(newMovies)
 	};
 	console.log(movies);
 	return (
@@ -50,11 +62,11 @@ const Movies = ({allMovies}) => {
 							{movies?.map((movie) => (
 								<div data-testid='movie-card' key={movie?.id} className='bg-white p-4 rounded-lg shadow-md hover:scale-105 transition-all duration-300 ease-in-out relative'>
 									<button type='button' onClick={() => handleLike(movie?.id)} className='absolute z-[10000000] top-8 right-8 bg-gray-300 rounded-full p-1'>
-										{movie?.liked ? <AiTwotoneHeart size={25} color='#BE123C' /> : <AiOutlineHeart size={25} />}
+										{movie?.isLiked ? <AiTwotoneHeart size={25} color='#BE123C' /> : <AiOutlineHeart size={25} />}
 									</button>
 									<Link href={`/movies/${movie?.id}`}>
 										<div className='relative'>
-											<img data-testid='movie-poster' src={movie?.poster_path ? `https://image.tmdb.org/t/p/original${movie?.poster_path}` : '/assets/images/default.jpg'} alt={movie.title} className='w-full h-[350px] mb-2' />
+											<img data-testid='movie-poster' src={movie?.poster_path ? `https://image.tmdb.org/t/p/original${movie?.poster_path}` : '/assets/images/default.jpg'} alt={movie?.title} className='w-full h-[350px] mb-2' />
 										</div>
 										<section className='flex flex-col gap-2'>
 											<p className='text-[#9CA3AF] text-[12px] font-bold uppercase' data-testid='movie-title'>
