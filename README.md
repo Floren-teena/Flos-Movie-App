@@ -7,7 +7,8 @@
 # 📗 Table of Contents
 
 - [📖 About the Project](#about-project)
-  - [🛠 Built With](#built-with)
+    - [Screenshot](#screenshot)
+    - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Significant Features](#significant-features)
   - [🚀 Live Demo](#live-demo)
@@ -20,7 +21,13 @@
 - [🤝 Contributing](#contributing)
 - [🙏 Acknowledgements](#acknowledgements)
 
-### Flos Movies <a name="about-project"></a>
+## Flos Movies <a name="about-project"></a>
+
+### Screenshot
+
+  ![](./public/assets/images/screenshot.png)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🛠 Built With <a name="built-with"></a>
 
