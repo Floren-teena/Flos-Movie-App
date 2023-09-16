@@ -7,7 +7,6 @@
 # 📗 Table of Contents
 
 - [📖 About the Project](#about-project)
-    - [Screenshot](#screenshot)
     - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Significant Features](#significant-features)
@@ -24,10 +23,6 @@
 ## About the Project <a name="about-project"></a>
 
   This is the Stage Two task for the Frontend track of the HNG internship by Zuri Teams. Completed on Saturday, 16th of September, 2023.
-
-### Screenshot
-
-<img src="./public/assets/images/screenshot.png" alt="Screenshot of the project">
 
 ## 🛠 Built With <a name="built-with"></a>
 
