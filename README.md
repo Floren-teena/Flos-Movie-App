@@ -25,7 +25,7 @@
 
 ### Screenshot
 
-  ![](./public/assets/images/screenshot.png)
+![](./public/assets/images/screenshot.png)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
