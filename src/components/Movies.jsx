@@ -44,7 +44,7 @@ const Movies = ({allMovies}) => {
 				</div>
 				<>
 					{movies.length < 1 ? (
-						<h1 className='text-red-400 w-full h-[200px] flex justify-center items-center text-center text-2xl font-semibold'>No movies found for {searchQuery}, Try another movie name.....</h1>
+						<h1 className='text-red-400 w-full h-[200px] flex justify-center items-center text-center text-2xl font-semibold'>No movies found! {searchQuery}, Kindly try another movie</h1>
 					) : (
 						<div className='gap-y-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-8 py-8'>
 							{movies?.map((movie) => (

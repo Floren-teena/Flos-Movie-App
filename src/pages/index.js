@@ -30,7 +30,7 @@ export default function Home() {
       const {data} = response
       console.log(data.results);
       setMovies(data.results)
-      setFeaturedMovie(data.results[0])
+      setFeaturedMovie(data.results[1])
       setMoviesLoading(false)
     } catch (error) {
       setMoviesLoading(false)
@@ -41,10 +41,31 @@ export default function Home() {
     fetchMovies();
 }, []);
   console.log(moviesLoading)
+  const searchMovies = async (query) => {
+    try {
+      const response = await axios.get(`${baseUrl}/search/movie?query=${query}`, {
+        headers: {
+          'Authorization': `Bearer ${token}`,
+        },
+        contentType: 'application/json',
+      });
+      if (response.error) {
+        throw new Error("An error occured while fetching data") 
+      }
+      const {data} = response
+      console.log(data.results);
+      setMovies(data.results)
+      setFeaturedMovie(data.results[1])
+      setMoviesLoading(false)
+    } catch (error) {
+      setMoviesLoading(false)
+      setError(error.message)
+    }
+  };
 	return (
 		<main>
 			<section className='mb-8 w-full bg-blend-color h-[80vh] flex flex-col justify-center items-center' style={{ backgroundImage: `url(${featuredMovie?.poster_path ? `https://image.tmdb.org/t/p/original${featuredMovie?.poster_path}` : '/assets/images/default.jpg'})`, backgroundRepeat: 'no-repeat', backgroundPosition: 'center', backgroundSize: 'cover', backgroundColor: 'rgba(0,0,0,0.6)' }}>
-				<Navbar />
+				<Navbar searchMovies={searchMovies}/>
         {moviesLoading?<section className='bg-gray-50 w-full h-screen flex justify-center items-center'>
 				<ColorRing visible={true} height='80' width='80' ariaLabel='blocks-loading' wrapperStyle={{}} wrapperClass='blocks-wrapper' colors={['#e15b64', '#f47e60', '#f8b26a', '#abbd81', '#849b87']} />
 			</section>:

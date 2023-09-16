@@ -39,7 +39,7 @@ const Sidebar = () => {
 		<aside className='bg-white text-[#666666] flex-1 min-w-64 flex flex-col overflow-auto items-center h-screen rounded-tr-[45px]  rounded-br-[45px] border-[rgba(0, 0, 0, 0.30)] border-r'>
 			<div className='p-4 text-xl flex items-center gap-3 font-bold'>
 				<Image src='/assets/images/logo.svg' layout='intrisic' height={50} width={50} />
-				<h1 className='text-[#333333] text-[24px] font-bold'>Zik Movies</h1>
+				<h1 className='text-[#333333] text-[24px] font-bold'>Flos Movies</h1>
 			</div>
 			<ul className='flex-grow mt-6 w-full '>
 				{navLinks.map((link) => (

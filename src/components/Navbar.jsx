@@ -5,7 +5,7 @@ import { BsSearch } from 'react-icons/bs';
 import { AiOutlineMenuUnfold, AiOutlineClose } from 'react-icons/ai';
 import Form from './Form';
 
-const Navbar = () => {
+const Navbar = ({searchMovies}) => {
 	const [height, setHeight] = useState(0);
 	const [openForm, setOpenForm] = useState(false);
 
@@ -32,13 +32,13 @@ const Navbar = () => {
 						<Link href='/'>
 							<div className='md:p-2 text-xl flex items-center gap-3 font-bold'>
 								<Image src='/assets/images/logo.svg' layout='intrisic' height={25} width={25} />
-								<h1 className={`${height >= 150 ? 'text-[#333]' : 'text-white'} text-[20px] font-bold`}>Zik Movies</h1>
+								<h1 className={`${height >= 150 ? 'text-[#333]' : 'text-white'} text-[20px] font-bold`}>Flos Movies</h1>
 							</div>
 						</Link>
 					</div>
 					<div className='md:flex space-x-4 hidden  rounded-lg'>
 						<div className='relative  rounded-lg'>
-							<Form />
+							<Form searchMovies={searchMovies}/>
 							<div className='absolute inset-y-0 right-0 flex items-center pr-3'>{/* Search icon (optional) */}</div>
 						</div>
 					</div>
@@ -54,7 +54,7 @@ const Navbar = () => {
 				</div>
 				{openForm && (
 					<section className='absolute left-0 transition-all duration-300 ease-linear mt-8 w-[350px] flex justify-center '>
-						<Form />
+						<Form searchMovies={searchMovies}/>
 					</section>
 				)}
 			</section>

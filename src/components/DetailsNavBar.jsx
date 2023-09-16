@@ -10,7 +10,6 @@ const DetailsNavBar = () => {
 	const [height, setHeight] = useState(0);
 	const [openForm, setOpenForm] = useState(false);
 
-	// an effect to cal windows scroll height
 	useEffect(() => {
 		const handleScroll = () => {
 			setHeight(window.scrollY);
@@ -22,14 +21,14 @@ const DetailsNavBar = () => {
 	}, [height]);
 
 	return (
-		<nav className={`px-4 md:px-8 py-3 z-[999999999] shadow-md transition-all duration-300 ease-in-out fixed top-0 left-0 w-full ${height >= 150 ? 'bg-white' : 'bg-[#333]'}`}>
+		<nav className={`px-4 md:px-8 py-3 z-[999999999] shadow-md transition-all top-0 left-0 w-full duration-300 ease-in-out fixed ${height >= 150 ? 'bg-white' : 'bg-[#333]'}`}>
 			<section className='relative'>
 				<div className='container mx-auto flex justify-center items-center'>
 					<div className='text-white text-center text-2xl font-bold'>
 						<Link href='/'>
 							<div className='md:p-4 text-xl flex items-center gap-3 font-bold'>
 								<Image src='/assets/images/logo.svg' layout='intrisic' height={30} width={30} />
-								<h1 className={`${height >= 150 ? 'text-[#333]' : 'text-white'} text-[24px] font-bold`}>Zik Movies</h1>
+								<h1 className={`${height >= 150 ? 'text-[#333]' : 'text-white'} text-[24px] font-bold`}>Flos Movies</h1>
 							</div>
 						</Link>
 					</div>

@@ -10,23 +10,36 @@ const token = process.env.NEXT_PUBLIC_MOVIESDB_API_KEY;
 const baseUrl = process.env.NEXT_PUBLIC_API_URL;
 const api_key = process.env.NEXT_PUBLIC_MOVIESDB_API_KEY;
 const Index = () => {
-    const movieError = ""
-    const [movie, setMovie] = useState({});
-    const [movieLoading, setMovieLoading] = useState(false);
-	const fetchMovie = async (id) => {
-        const { data } = await axios.get(`${baseUrl}/movie/${id}`, {
-            headers: {
-                'Authorization': `Bearer ${token}`,
-            },
-            contentType: 'application/json',
-        });
-        console.log(data);
-        setMovie(data);
-        return data;
-    };
 	const router = useRouter();
 	const { id } = router.query;
+    const [movie, setMovie] = useState({});
+	const [error, setError] = useState("")
+    const [movieLoading, setMovieLoading] = useState(false);
+	const fetchMovie = async (id) => {
+		setMovieLoading(true)
+		try {
+			const response = await axios.get(`${baseUrl}/movie/${id}`, {
+				headers: {
+					'Authorization': `Bearer ${token}`,
+				},
+				contentType: 'application/json',
+			});
+			if (response.error) {
+				throw new Error("An error occured while fetching data") 
+			  }
+			const {data} = response
+		  console.log(data);
+		  setMovie(data)
+		  setMovieLoading(false)
+		} catch (error) {
+			setMovieLoading(false)
+      		setError(error.message)
+		}
+        
+    };
+	
 	useEffect(() => {
+		setError("")
 	    fetchMovie(id);
 	}, [id]);
 	console.log(movie);
@@ -65,9 +78,9 @@ const Index = () => {
 				</section>
 			) : (
 				<>
-					{movieError ? (
+					{error ? (
 						<section className='bg-gray-50 w-full md:col-span-5 lg:col-span-8 h-screen flex justify-center items-center'>
-							<h1 className='text-red-500 text-2xl font-bold'>{movieError}</h1>
+							<h1 className='text-red-500 text-2xl font-bold'>{error}</h1>
 						</section>
 					) : (
 						<article className='md:col-span-5 lg:col-span-8 z-[1000] px-4 md:px-8 py-20 md:py-12 block w-full h-screen overflow-auto'>
