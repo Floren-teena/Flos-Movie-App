@@ -21,13 +21,13 @@
 - [🤝 Contributing](#contributing)
 - [🙏 Acknowledgements](#acknowledgements)
 
-## Flos Movies <a name="about-project"></a>
+## About the Project <a name="about-project"></a>
+
+  This is the Stage Two task for the Frontend track of the HNG internship by Zuri Teams. Completed on Saturday, 16th of September, 2023.
 
 ### Screenshot
 
-![](./public/assets/images/screenshot.png)
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+![Screenshot of the project](./public/assets/images/screenshot.png)
 
 ## 🛠 Built With <a name="built-with"></a>
 
