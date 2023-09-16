@@ -5,7 +5,7 @@ import { BsSearch } from 'react-icons/bs';
 import { AiOutlineMenuUnfold, AiOutlineClose } from 'react-icons/ai';
 import Form from './Form';
 
-const Navbar = ({searchMovies}) => {
+const Navbar = ({searchMovies, searchQuery, setSearchQuery}) => {
 	const [height, setHeight] = useState(0);
 	const [openForm, setOpenForm] = useState(false);
 
@@ -38,7 +38,7 @@ const Navbar = ({searchMovies}) => {
 					</div>
 					<div className='md:flex space-x-4 hidden  rounded-lg'>
 						<div className='relative  rounded-lg'>
-							<Form searchMovies={searchMovies}/>
+							<Form searchMovies={searchMovies} searchQuery={searchQuery} setSearchQuery={setSearchQuery}/>
 							<div className='absolute inset-y-0 right-0 flex items-center pr-3'>{/* Search icon (optional) */}</div>
 						</div>
 					</div>
@@ -54,7 +54,7 @@ const Navbar = ({searchMovies}) => {
 				</div>
 				{openForm && (
 					<section className='absolute left-0 transition-all duration-300 ease-linear mt-8 w-[350px] flex justify-center '>
-						<Form searchMovies={searchMovies}/>
+						<Form searchMovies={searchMovies} searchQuery={searchQuery} setSearchQuery={setSearchQuery}/>
 					</section>
 				)}
 			</section>

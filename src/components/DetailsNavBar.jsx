@@ -28,7 +28,7 @@ const DetailsNavBar = () => {
 						<Link href='/'>
 							<div className='md:p-4 text-xl flex items-center gap-3 font-bold'>
 								<Image src='/assets/images/logo.svg' layout='intrisic' height={30} width={30} />
-								<h1 className={`${height >= 150 ? 'text-[#333]' : 'text-white'} text-[24px] font-bold`}>Flos Movies</h1>
+								<h1 className={`${height >= 150 ? 'text-[#333]' : 'text-white'} text-[24px] font-bold`}>Flo Movies</h1>
 							</div>
 						</Link>
 					</div>

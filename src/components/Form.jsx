@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import { BsSearch } from 'react-icons/bs';
 
-const Form = ({searchMovies}) => {
-	const [searchQuery, setSearchQuery] = useState('');
+const Form = ({searchMovies, searchQuery, setSearchQuery}) => {
 	const handleSubmit = (e) => {
 		e.preventDefault();
 		searchMovies(searchQuery)

@@ -5,10 +5,9 @@ import Link from 'next/link';
 import { MdOutlineKeyboardArrowLeft, MdOutlineKeyboardArrowRight } from 'react-icons/md';
 import { AiOutlineHeart, AiTwotoneHeart } from 'react-icons/ai';
 
-const Movies = ({allMovies}) => {
+const Movies = ({allMovies, searchQuery}) => {
 	const [movies, setMovies] = useState([]);
 	const [isMore, setIsMore] = useState(false);
-    const searchQuery = ""
     useEffect(() => {
 		allMovies.forEach((item)=>{
 			item.isLiked=false 
@@ -17,7 +16,7 @@ const Movies = ({allMovies}) => {
 	}, [allMovies]);
 
 	const handleMore = () => {
-		
+		setMovies(allMovies);
 		setIsMore(true);
 	};
 
@@ -43,7 +42,7 @@ const Movies = ({allMovies}) => {
 		<section className='py-8 px-3'>
 			<div className='container mx-auto'>
 				<div className='flex justify-between font-semibold'>
-					<h2 className='text-xl md:text-2xl px-2 lg:text-[36px] capitalize font-bold '>{searchQuery ? searchQuery : 'Movies'} Movies</h2>
+					<h2 className='text-xl md:text-2xl px-2 lg:text-[36px] capitalize font-bold '>{searchQuery ? searchQuery : 'All'} Movies</h2>
 					{!isMore ? (
 						<button className='text-[#BE123C] flex items-center ' onClick={handleMore}>
 							See more <MdOutlineKeyboardArrowRight size={25} />

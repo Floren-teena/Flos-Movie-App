@@ -88,7 +88,7 @@ const Index = () => {
 								<DetailsNavBar />
 							</section>
 							<div className='w-full h-[400px] z-[0]  relative flex-wrap'>
-								<Image layout='fill' objectFit='cover' data-testid='movie-poster' src={`https://image.tmdb.org/t/p/original${movie?.poster_path}`} alt={movie?.title} className='w-full rounded-xl z-[10]' priority />
+								<Image layout='fill' objectFit='cover' data-testid='movie-poster' src={`https://image.tmdb.org/t/p/original${movie?.poster_path}`} alt={movie?.title||"movieImage"} className='w-full rounded-xl z-[10]' priority />
 							</div>
 							<section>
 								<div className='flex justify-between mb-12'>
@@ -127,8 +127,8 @@ const Index = () => {
 											</p>
 										</div>
 										<div className='flex flex-wrap gap-4'>
-											<p className='font-semibold text-[14px] md:text-base'>Revenue :</p>
-											<p className='text-[#B91C1C] text-[14px] md:text-basefont-semibold'>${formatPrice(movie?.revenue)}</p>
+											<p className='font-semibold text-[14px] md:text-base'>Status :</p>
+											<p className='text-[#B91C1C] text-[14px] md:text-basefont-semibold'>{movie?.status}</p>
 										</div>
 										<div className='flex flex-wrap gap-4'>
 											<p className='font-semibold text-[14px] md:text-base'>Spoken Languages :</p>
@@ -141,8 +141,8 @@ const Index = () => {
 											</ul>
 										</div>
 										<div className='flex flex-wrap gap-2'>
-											<p className='font-semibold flex text-[14px] md:text-base'>Tag line :</p>
-											<p className='text-[#B91C1C] flex-wrap text-[14px] md:text-base font-semibold'>{movie?.tagline}</p>
+											<p className='font-semibold flex text-[14px] md:text-base'>Popularity: </p>
+											<p className='text-[#B91C1C] flex-wrap text-[14px] md:text-base font-semibold'>{movie?.popularity}</p>
 										</div>
 									</article>
 									<article className='col-span-1'>

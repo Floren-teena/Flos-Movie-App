@@ -7,11 +7,12 @@ import Navbar from '@/components/Navbar';
 import { ColorRing } from 'react-loader-spinner';
 import axios from 'axios';
 import Error from 'next/error';
-const token = process.env.NEXT_PUBLIC_MOVIESDB_ACCESS_TOKEN;
+const token = process.env.NEXT_PUBLIC_MOVIESDB_API_KEY;
 const baseUrl = process.env.NEXT_PUBLIC_API_URL;
-const api_key = process.env.NEXT_PUBLIC_MOVIESDB_API_KEY;
+const api_key = process.env.NEXT_PUBLIC_API_KEY;
 export default function Home() {
   const [movies, setMovies] = useState([]);
+  const [searchQuery, setSearchQuery] = useState('');
   const [error, setError] = useState("")
   const [moviesLoading, setMoviesLoading] = useState(false)
   const [featuredMovie, setFeaturedMovie] = useState({})
@@ -42,10 +43,11 @@ export default function Home() {
 }, []);
   console.log(moviesLoading)
   const searchMovies = async (query) => {
+    setMoviesLoading(true)
     try {
       const response = await axios.get(`${baseUrl}/search/movie?query=${query}`, {
         headers: {
-          'Authorization': `Bearer ${token}`,
+          'Authorization': `Bearer ${api_key}`,
         },
         contentType: 'application/json',
       });
@@ -65,14 +67,14 @@ export default function Home() {
 	return (
 		<main>
 			<section className='mb-8 w-full bg-blend-color h-[80vh] flex flex-col justify-center items-center' style={{ backgroundImage: `url(${featuredMovie?.poster_path ? `https://image.tmdb.org/t/p/original${featuredMovie?.poster_path}` : '/assets/images/default.jpg'})`, backgroundRepeat: 'no-repeat', backgroundPosition: 'center', backgroundSize: 'cover', backgroundColor: 'rgba(0,0,0,0.6)' }}>
-				<Navbar searchMovies={searchMovies}/>
+				<Navbar searchMovies={searchMovies} searchQuery={searchQuery} setSearchQuery={setSearchQuery}/>
         {moviesLoading?<section className='bg-gray-50 w-full h-screen flex justify-center items-center'>
 				<ColorRing visible={true} height='80' width='80' ariaLabel='blocks-loading' wrapperStyle={{}} wrapperClass='blocks-wrapper' colors={['#e15b64', '#f47e60', '#f8b26a', '#abbd81', '#849b87']} />
 			</section>:
 				<SplashScreen featuredMovie={featuredMovie}/>
       }
 			</section>
-			<Movies allMovies={movies} />
+			<Movies allMovies={movies} searchQuery={searchQuery}/>
 			<Footer />
 		</main>
 	);
