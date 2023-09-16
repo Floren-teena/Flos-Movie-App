@@ -7,7 +7,7 @@ import Navbar from '@/components/Navbar';
 import { ColorRing } from 'react-loader-spinner';
 import axios from 'axios';
 import Error from 'next/error';
-const token = process.env.NEXT_PUBLIC_MOVIESDB_API_KEY;
+const token = process.env.NEXT_PUBLIC_MOVIESDB_ACCESS_TOKEN;
 const baseUrl = process.env.NEXT_PUBLIC_API_URL;
 const api_key = process.env.NEXT_PUBLIC_MOVIESDB_API_KEY;
 export default function Home() {

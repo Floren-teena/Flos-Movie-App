@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
-import Sidebar from '@/components/Sidebar';
+import Sidebar from '@/components/SideBar';
 import Image from 'next/image';
 import { ColorRing } from 'react-loader-spinner';
 import DetailsNavBar from '@/components/DetailsNavBar';
