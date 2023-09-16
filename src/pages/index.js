@@ -47,7 +47,7 @@ export default function Home() {
     try {
       const response = await axios.get(`${baseUrl}/search/movie?query=${query}`, {
         headers: {
-          'Authorization': `Bearer ${api_key}`,
+          'Authorization': `Bearer ${token}`,
         },
         contentType: 'application/json',
       });
