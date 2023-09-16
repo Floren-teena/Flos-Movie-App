@@ -27,7 +27,7 @@
 
 ### Screenshot
 
-![Screenshot of the project](./public/assets/images/screenshot.png)
+<img src="./public/assets/images/screenshot.png" alt="Screenshot of the project">
 
 ## 🛠 Built With <a name="built-with"></a>
 
