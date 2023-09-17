@@ -66,10 +66,14 @@ const Movies = ({allMovies, searchQuery}) => {
 										<div className='relative'>
 											<img data-testid='movie-poster' src={movie?.poster_path ? `https://image.tmdb.org/t/p/original${movie?.poster_path}` : '/assets/images/default.jpg'} alt={movie?.title} className='w-full h-[350px] mb-2' />
 										</div>
-										<section className='flex flex-col gap-2'>
-											<p className='text-[#9CA3AF] text-[12px] font-bold uppercase' data-testid='movie-title'>
-												{movie?.original_language}, <span data-testid='movie-release-date'>{movie?.release_date ? new Date(movie?.release_date).toUTCString() : 'No release date'}</span>
-											</p>
+										<section className='flex flex-col gap-2'> 
+										<div className='flex items-center gap-2'>
+										<p className='text-[#9CA3AF] text-[12px] font-bold uppercase' data-testid='movie-title'>
+												{movie?.original_language}
+											</p>,
+											<span className='text-[#9CA3AF]' data-testid='movie-release-date'>{movie?.release_date ? new Date(movie?.release_date).toUTCString() : 'No release date'}</span>
+										</div>
+									
 											<h3 data-testid='movie-title' className='text-lg font-bold text-[#111827] text-[18px] leading-[101%]'>
 												{movie?.title}
 											</h3>

@@ -1,4 +1,3 @@
-import { useSelector, useDispatch } from 'react-redux';
 import { useEffect, useState } from 'react';
 import SplashScreen from '@/components/SplashScreen';
 import Movies from '@/components/Movies';
@@ -19,7 +18,7 @@ export default function Home() {
    const fetchMovies = async () => {
     setMoviesLoading(true)
     try {
-      const response = await axios.get(`${baseUrl}/movie/popular?api_key=${api_key}`, {
+      const response = await axios.get(`${baseUrl}/movie/top_rated?api_key=${api_key}`, {
         headers: {
           'Authorization': `Bearer ${token}`,
         },

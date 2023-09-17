@@ -8,7 +8,6 @@ const Navbar = ({searchMovies, searchQuery, setSearchQuery}) => {
 	const [height, setHeight] = useState(0);
 	const [openForm, setOpenForm] = useState(false);
 
-	// an effect to cal windows scroll height
 	useEffect(() => {
 		const handleScroll = () => {
 			setHeight(window.scrollY);

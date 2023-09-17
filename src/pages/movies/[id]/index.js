@@ -14,7 +14,16 @@ const Index = () => {
 	const { id } = router.query;
     const [movie, setMovie] = useState({});
 	const [error, setError] = useState("")
-    const [movieLoading, setMovieLoading] = useState(false);
+    const [movieLoading, setMovieLoading] = useState(true);
+	/* const fetchMovie = async () => {
+		setMovieLoading(true)
+		try {
+			const { id } = await router.query; const response = await axios.get(`${baseUrl}/movie/${id}`, {
+				headers: {
+					'Authorization': `Bearer ${token}`,
+				},
+				contentType: 'application/json',
+			}); */
 	const fetchMovie = async (id) => {
 		setMovieLoading(true)
 		try {
@@ -40,7 +49,9 @@ const Index = () => {
 	
 	useEffect(() => {
 		setError("")
-	    fetchMovie(id);
+		if(id){
+			fetchMovie(id);
+		}
 	}, [id]);
 	console.log(movie);
 

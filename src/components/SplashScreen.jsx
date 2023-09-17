@@ -5,7 +5,7 @@ const SplashScreen = ({featuredMovie}) => {
 	return (
 		<section className='text-white w-full  flex px-4 justify-center items-center'>
 			<div className='container mx-auto md:mx-16'>
-				<div className='flex gap-4 w-full md:w-[60%] lg:w-[40%] justify-between flex-col font-semibold'>
+				<div className='flex gap-4 w-full md:w-[60%] justify-between flex-col font-semibold'>
 					<h1 className='font-bold text-4xl md:text-5xl'>{featuredMovie?.title}</h1>
 					<div className='flex gap-8 text-sm h-8 text-white font-normal'>
 						<div className='flex items-center gap-2'>
