@@ -42,9 +42,9 @@ const Navbar = ({searchMovies, searchQuery, setSearchQuery}) => {
 					</div>
 
 					<div className={`${height >= 150 ? 'text-[#333]' : 'text-white'}`}>
-						<Link href='/signin' className='font-semibold hidden md:flex'>
+						{/* <Link href='/signin' className='font-semibold hidden md:flex'>
 							Sign In
-						</Link>
+						</Link> */}
 						<button onClick={handleMenu} type='button' className='flex md:hidden bg-[#BE123C] p-1 text-white rounded-full'>
 							{openForm ? <AiOutlineClose size={20} /> : <AiOutlineMenuUnfold size={20} />}
 						</button>
