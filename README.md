@@ -7,22 +7,23 @@
 # 📗 Table of Contents
 
 - [📖 About the Project](#about-project)
-    - [🛠 Built With](#built-with)
-    - [Tech Stack](#tech-stack)
-    - [Significant Features](#significant-features)
+  - [🛠 Built With](#built-with)
+  - [Tech Stack](#tech-stack)
+  - [Significant Features](#significant-features)
   - [🚀 Live Demo](#live-demo)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
   - [Usage](#usage)
-  - [Deployment](#triangular_flag_on_post-deployment)
+  - [Deployment](#deployment)
 - [👥 Authors](#authors)
 - [🤝 Contributing](#contributing)
-- [🙏 Acknowledgements](#acknowledgements)
 
 ## About the Project <a name="about-project"></a>
 
-  This is the Stage Two task for the Frontend track of the HNG internship by Zuri Teams. Completed on Saturday, 16th of September, 2023.
+Flo's Movie App is a movie discovery web application that showcases trending movies, users
+can search for any movie of their choice and view details about the movies
+This is a Movie application built with HTML, Tailwind CSS, Next.Js and IMDB API
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -79,14 +80,14 @@ To clone this repository to your desired folder, follow the steps below:
 
 ```sh
   cd my-folder
-  git clone https://github.com/Floren-teena/HNG-Stage-Two-Frontend-Task.git
+  git clone https://github.com/Floren-teena/Flos-Movie-App.git
 ```
 
 **Using GitHub Desktop app**
 
 - Follow the steps below
 
-  - Visit this link [click me](https://github.com/Floren-teena/HNG-Stage-Two-Frontend-Task)
+  - Visit this link [click me](https://github.com/Floren-teena/Flos-Movie-App.git)
   - Click the green button labelled "code"
   - Select the "Open with GitHub Desktop" option
   - After the GitHub Desktop add opens, click the "clone repo" button
@@ -120,11 +121,5 @@ You can deploy this project by:
 ## 🤝 Contributing <a name="contributing"></a>
 
 Contributions and feature requests are welcome!
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-## 🙏 Acknowledgments <a name="acknowledgements"></a>
-
-I would love to thank the HNG Internship team for giving me the opportunity to participate in this program and build this project.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
